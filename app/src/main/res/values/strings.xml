@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">MenuMaster</string>
+    <string name="welcome">Bem-vindo ao MenuMaster</string>
+    <string name="entradas">Entradas</string>
+    <string name="pratos">Pratos</string>
+    <string name="sobremesas">Sobremesas</string>
+    <string name="bebidas">Bebidas</string>
+    <string name="favoritos">Favoritos</string>
+    <string name="marcar_favorito">Favorito</string>
+    <string name="button_menu">Conheça nossos Cardápios</string>
+</resources>
