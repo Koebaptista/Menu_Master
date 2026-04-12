@@ -1,6 +1,7 @@
 package com.andreoliveira.menumaster
 
 import android.os.Bundle
+import android.widget.Button
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -28,6 +29,10 @@ class FavoritosActivity : AppCompatActivity(){
         }
 
         recycler.adapter = PratoAdapter(lista,this)
+
+        findViewById<Button>(R.id.btnVoltarMenu).setOnClickListener{
+            finish()
+        }
     }
 
     fun carregarFavoritos(): List<Prato>{
@@ -37,7 +42,9 @@ class FavoritosActivity : AppCompatActivity(){
             DadosCardapio.getLista("entradas"),
             DadosCardapio.getLista("pratos"),
             DadosCardapio.getLista("sobremesas"),
-            DadosCardapio.getLista("bebidas")
+            DadosCardapio.getLista("bebidas"),
+            DadosCardapio.getLista("extras")
+
         )
 
         val favoritos = mutableListOf<Prato>()
