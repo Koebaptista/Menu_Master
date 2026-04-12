@@ -1,226 +1,109 @@
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:fillViewport="true"
-    tools:context=".MenuActivity"
+    android:orientation="vertical"
     android:background="@color/background">
 
-    <LinearLayout
-        android:id="@+id/layoutContainer"
+    <TextView
+        android:id="@+id/txtTitle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:padding="16dp">
+        android:text="Cardápio"
+        android:textSize="26sp"
+        android:textStyle="bold"
+        android:textColor="@color/text_primary"
+        android:padding="16dp"/>
 
-        <HorizontalScrollView
-            android:id="@+id/horizontalCategories"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:scrollbars="none"
-            android:fillViewport="true"
-            android:overScrollMode="always"
-            >
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Escolha uma categoria"
+        android:textSize="16sp"
+        android:textColor="@color/text_secondary"
+        android:paddingStart="16dp"
+        android:paddingBottom="8dp"/>
 
-            <LinearLayout
-                android:id="@+id/layoutCategories"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:paddingStart="8dp"
-                android:paddingEnd="8dp"
-                >
-
-                <Button
-                    android:id="@+id/btnEntries"
-                    android:layout_width="120dp"
-                    android:layout_height="50dp"
-                    android:backgroundTint="@color/primary"
-                    android:padding="10dp"
-                    android:text="@string/entries"
-                    android:textColor="@color/white"
-                    android:layout_marginEnd="12dp"
-                    />
-
-                <Button
-                    android:id="@+id/btnDishes"
-                    android:layout_width="120dp"
-                    android:layout_height="50dp"
-                    android:text="@string/dishes"
-                    android:padding="10dp"
-                    android:layout_marginEnd="12dp"
-                    android:textColor="@color/white"
-                    android:backgroundTint="@color/primary"/>
-
-                <Button
-                    android:id="@+id/btnDesserts"
-                    android:layout_width="120dp"
-                    android:layout_height="50dp"
-                    android:text="@string/desserts"
-                    android:padding="10dp"
-                    android:layout_marginEnd="12dp"
-                    android:textColor="@color/white"
-                    android:backgroundTint="@color/primary"/>
-
-                <Button
-                    android:id="@+id/btnDrinks"
-                    android:layout_width="120dp"
-                    android:layout_height="50dp"
-                    android:text="@string/drinks"
-                    android:padding="10dp"
-                    android:layout_marginEnd="12dp"
-                    android:textColor="@color/white"
-                    android:backgroundTint="@color/primary"/>
-
-            </LinearLayout>
-        </HorizontalScrollView>
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none">
 
         <LinearLayout
-            android:id="@+id/card1"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:layout_marginTop="16dp"
-            android:background="@color/card"
-            android:padding="12dp"
-            android:elevation="4dp">
+            android:orientation="horizontal"
+            android:paddingStart="12dp"
+            android:paddingEnd="12dp">
 
-<!--            <ImageView-->
-<!--                android:id="@+id/imgPizza"-->
-<!--                android:layout_width="match_parent"-->
-<!--                android:layout_height="180dp"-->
-<!--                android:scaleType="centerCrop"/>-->
+            <Button
+                android:id="@+id/btnEntries"
+                android:layout_width="140dp"
+                android:layout_height="50dp"
+                android:text="Entradas"
+                android:textColor="@color/white"
+                android:backgroundTint="@color/primary"
+                android:layout_marginEnd="12dp"/>
 
-            <TextView
-                android:id="@+id/txtPizza"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/pizza_pepperoni"
-                android:textSize="20sp"
-                android:textStyle="bold"
-                android:textColor="@color/text_primary"
-                android:layout_marginTop="8dp"/>
+            <Button
+                android:id="@+id/btnDishes"
+                android:layout_width="140dp"
+                android:layout_height="50dp"
+                android:text="Pratos"
+                android:textColor="@color/white"
+                android:backgroundTint="@color/primary"
+                android:layout_marginEnd="12dp"/>
 
-            <CheckBox
-                android:id="@+id/checkPizza"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/favoritos"
-                android:textSize="16sp"
-                android:layout_marginTop="4dp"/>
+            <Button
+                android:id="@+id/btnDesserts"
+                android:layout_width="140dp"
+                android:layout_height="50dp"
+                android:text="Doces"
+                android:textColor="@color/white"
+                android:backgroundTint="@color/primary"
+                android:layout_marginEnd="12dp"/>
+
+            <Button
+                android:id="@+id/btnDrinks"
+                android:layout_width="140dp"
+                android:layout_height="50dp"
+                android:text="Bebidas"
+                android:textColor="@color/white"
+                android:backgroundTint="@color/primary"
+                android:layout_marginEnd="12dp"/>
+
+            <Button
+                android:id="@+id/btnExtras"
+                android:layout_width="140dp"
+                android:layout_height="50dp"
+                android:text="Extras"
+                android:textColor="@color/white"
+                android:backgroundTint="@color/primary"
+                android:layout_marginEnd="12dp"/>
+
+            <Button
+                android:id="@+id/btnFavoritos"
+                android:layout_width="140dp"
+                android:layout_height="50dp"
+                android:text="Favoritos"
+                android:textColor="@color/white"
+                android:backgroundTint="@color/primary"
+                android:layout_marginEnd="12dp"/>
 
         </LinearLayout>
+    </HorizontalScrollView>
 
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/text_secondary"
+        android:layout_marginTop="12dp"
+        android:layout_marginBottom="8dp"/>
 
-        <LinearLayout
-            android:id="@+id/card2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:layout_marginTop="16dp"
-            android:background="@color/card"
-            android:padding="12dp"
-            android:elevation="4dp">
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerPratos"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="12dp"/>
 
-<!--            <ImageView-->
-<!--                android:id="@+id/imgHamburguer"-->
-<!--                android:layout_width="match_parent"-->
-<!--                android:layout_height="180dp"-->
-<!--                android:scaleType="centerCrop"/>-->
-
-            <TextView
-                android:id="@+id/txtHamburguer"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/artisanal_hamburger"
-                android:textSize="20sp"
-                android:textStyle="bold"
-                android:textColor="@color/text_primary"
-                android:layout_marginTop="8dp"/>
-
-            <CheckBox
-                android:id="@+id/checkHamburguer"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/favoritos"
-                android:textSize="16sp"
-                android:layout_marginTop="4dp"/>
-
-        </LinearLayout>
-
-
-        <LinearLayout
-            android:id="@+id/card3"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:layout_marginTop="16dp"
-            android:background="@color/card"
-            android:padding="12dp"
-            android:elevation="4dp">
-
-<!--            <ImageView-->
-<!--                android:id="@+id/imgSorvete"-->
-<!--                android:layout_width="match_parent"-->
-<!--                android:layout_height="180dp"-->
-<!--                android:scaleType="centerCrop"/>-->
-
-            <TextView
-                android:id="@+id/txtSorvete"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/special_ice_cream"
-                android:textSize="20sp"
-                android:textStyle="bold"
-                android:textColor="@color/text_primary"
-                android:layout_marginTop="8dp"/>
-
-            <CheckBox
-                android:id="@+id/checkSorvete"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/favoritos"
-                android:textSize="16sp"
-                android:layout_marginTop="4dp"/>
-
-        </LinearLayout>
-
-
-        <LinearLayout
-            android:id="@+id/card4"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:layout_marginTop="16dp"
-            android:background="@color/card"
-            android:padding="12dp"
-            android:elevation="4dp">
-
-<!--            <ImageView-->
-<!--                android:id="@+id/imgSuco"-->
-<!--                android:layout_width="match_parent"-->
-<!--                android:layout_height="180dp"-->
-<!--                android:scaleType="centerCrop"/>-->
-
-            <TextView
-                android:id="@+id/txtSuco"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/natural_juice"
-                android:textSize="20sp"
-                android:textStyle="bold"
-                android:textColor="@color/text_primary"
-                android:layout_marginTop="8dp"/>
-
-            <CheckBox
-                android:id="@+id/checkSuco"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/favoritos"
-                android:textSize="16sp"
-                android:layout_marginTop="4dp"/>
-
-        </LinearLayout>
-    </LinearLayout>
-</ScrollView>
+</LinearLayout>

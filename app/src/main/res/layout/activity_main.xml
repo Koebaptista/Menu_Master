@@ -1,32 +1,85 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:fillViewport="true"
     android:background="@color/background"
     tools:context=".MainActivity">
 
-    <TextView
-        android:id="@+id/txWelcome"
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/welcome"
-        android:textSize="25sp"
-        android:textColor="@color/text_primary"
-        android:gravity="center"
-        android:layout_marginTop="20dp"/>
+        android:padding="24dp">
 
-    <Button
-        android:id="@+id/btnDiscover"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/button_menu"
-        android:textColor="@color/white"
-        android:backgroundTint="@color/primary"
-        android:layout_centerHorizontal="true"
-        android:layout_below="@id/txWelcome"
-        android:layout_marginTop="300dp"/>
+        <TextView
+            android:id="@+id/txWelcome"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="MenuMaster"
+            android:textSize="32sp"
+            android:textStyle="bold"
+            android:textColor="@color/text_primary"
+            android:gravity="center"
+            android:layout_marginTop="40dp"/>
 
-</RelativeLayout>
+        <TextView
+            android:id="@+id/txtSubtitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Explore os melhores pratos do nosso cardápio"
+            android:textSize="16sp"
+            android:textColor="@color/text_secondary"
+            android:gravity="center"
+            android:layout_below="@id/txWelcome"
+            android:layout_marginTop="8dp"/>
+
+        <ImageView
+            android:id="@+id/imgBanner"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/txtSubtitle"
+            android:layout_marginTop="40dp"
+            android:src="@drawable/ic_launcher_foreground"
+            android:scaleType="centerInside"/>
+
+        <TextView
+            android:id="@+id/txtHighlight"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="🍔 Variedade de pratos\n🍰 Sobremesas deliciosas\n🥤 Bebidas refrescantes"
+            android:textSize="16sp"
+            android:textColor="@color/text_primary"
+            android:gravity="center"
+            android:layout_below="@id/imgBanner"
+            android:layout_marginTop="24dp"/>
+
+        <Button
+            android:id="@+id/btnDiscover"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:text="Ver Cardápio"
+            android:textSize="18sp"
+            android:textColor="@color/white"
+            android:backgroundTint="@color/primary"
+            android:layout_below="@id/txtHighlight"
+            android:layout_marginTop="40dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"/>
+
+        <TextView
+            android:id="@+id/txtFooter"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="App de demonstração"
+            android:textSize="12sp"
+            android:textColor="@color/text_secondary"
+            android:gravity="center"
+            android:layout_below="@id/btnDiscover"
+            android:layout_marginTop="40dp"
+            android:layout_marginBottom="20dp"/>
+
+    </RelativeLayout>
+
+</ScrollView>
