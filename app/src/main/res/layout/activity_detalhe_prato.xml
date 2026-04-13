@@ -10,6 +10,13 @@
     android:layout_height="match_parent"
     android:background="@color/background">
 
+    <Button
+        android:id="@+id/btnVoltar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="⬅ Voltar"
+        android:layout_marginBottom="8dp"/>
+
     <ImageView
         android:id="@+id/imgDetalhe"
         android:layout_width="match_parent"

@@ -7,6 +7,7 @@ import androidx.appcompat.app.AppCompatActivity
 
 import android.widget.CheckBox
 import android.widget.Toast
+import android.widget.Button
 
 class DetalhePratoActivity : AppCompatActivity() {
 
@@ -38,6 +39,12 @@ class DetalhePratoActivity : AppCompatActivity() {
                 "👤 Serve 1 pessoa"
             else
                 "👥 Serve $pessoas pessoas"
+
+        val btnVoltar = findViewById<Button>(R.id.btnVoltar)
+
+        btnVoltar.setOnClickListener {
+            finish()
+        }
 
         val prefs = getSharedPreferences("favoritos", MODE_PRIVATE)
         val check = findViewById<CheckBox>(R.id.checkFavoritoDetalhe)
