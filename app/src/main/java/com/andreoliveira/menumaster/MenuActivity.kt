@@ -48,6 +48,11 @@ class MenuActivity : AppCompatActivity(){
         }
     }
 
+    override fun onResume() {
+        super.onResume()
+        carregarCategoria("pratos")
+    }
+
     fun carregarCategoria(cat:String){
         val lista = DadosCardapio.getLista(cat)
         recycler.adapter = PratoAdapter(lista,this)

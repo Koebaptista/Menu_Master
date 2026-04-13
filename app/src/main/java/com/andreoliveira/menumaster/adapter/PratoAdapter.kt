@@ -17,7 +17,8 @@ import com.andreoliveira.menumaster.DetalhePratoActivity
 
 class PratoAdapter(
     private val lista: List<Prato>,
-    private val context: Context
+    private val context: Context,
+    private val onFavoritoAlterado: (() -> Unit)? = null
 ) : RecyclerView.Adapter<PratoAdapter.ViewHolder>() {
 
     class ViewHolder(view: View): RecyclerView.ViewHolder(view){
@@ -76,6 +77,8 @@ class PratoAdapter(
                 Toast.makeText(context, prato.nome + " adicionado aos favoritos", Toast.LENGTH_SHORT).show()
             }else{
                 Toast.makeText(context, prato.nome + " removido dos favoritos", Toast.LENGTH_SHORT).show()
+
+                onFavoritoAlterado?.invoke()
             }
         }
     }

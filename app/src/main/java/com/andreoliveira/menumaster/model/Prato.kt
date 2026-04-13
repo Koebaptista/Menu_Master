@@ -7,4 +7,5 @@ data class Prato(
     val preco: Double,
     val pessoas: Int,
     var favorito: Boolean = false
+
 )

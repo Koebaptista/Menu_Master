@@ -28,7 +28,9 @@ class FavoritosActivity : AppCompatActivity(){
             Toast.makeText(this,"Nenhum favorito ainda",Toast.LENGTH_SHORT).show()
         }
 
-        recycler.adapter = PratoAdapter(lista,this)
+        recycler.adapter = PratoAdapter(lista, this) {
+            atualizarLista()
+        }
 
         findViewById<Button>(R.id.btnVoltarMenu).setOnClickListener{
             finish()
@@ -58,5 +60,11 @@ class FavoritosActivity : AppCompatActivity(){
         }
 
         return favoritos
+    }
+    fun atualizarLista() {
+        val novaLista = carregarFavoritos()
+        recycler.adapter = PratoAdapter(novaLista, this) {
+            atualizarLista()
+        }
     }
 }
