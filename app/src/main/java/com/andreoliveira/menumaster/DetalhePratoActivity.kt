@@ -5,6 +5,9 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 
+import android.widget.CheckBox
+import android.widget.Toast
+
 class DetalhePratoActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -35,5 +38,22 @@ class DetalhePratoActivity : AppCompatActivity() {
                 "👤 Serve 1 pessoa"
             else
                 "👥 Serve $pessoas pessoas"
+
+        val prefs = getSharedPreferences("favoritos", MODE_PRIVATE)
+        val check = findViewById<CheckBox>(R.id.checkFavoritoDetalhe)
+
+        check.isChecked = prefs.getBoolean(nome, false)
+
+        check.setOnCheckedChangeListener { _, isChecked ->
+
+            prefs.edit().putBoolean(nome, isChecked).apply()
+
+            if (isChecked) {
+                Toast.makeText(this, "$nome adicionado aos favoritos", Toast.LENGTH_SHORT).show()
+            } else {
+                Toast.makeText(this, "$nome removido dos favoritos", Toast.LENGTH_SHORT).show()
+            }
+        }
     }
 }
+
