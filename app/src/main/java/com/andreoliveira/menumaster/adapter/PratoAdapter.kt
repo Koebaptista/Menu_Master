@@ -12,6 +12,9 @@ import androidx.recyclerview.widget.RecyclerView
 import com.andreoliveira.menumaster.model.Prato
 import com.andreoliveira.menumaster.R
 
+import android.content.Intent
+import com.andreoliveira.menumaster.DetalhePratoActivity
+
 class PratoAdapter(
     private val lista: List<Prato>,
     private val context: Context
@@ -22,6 +25,8 @@ class PratoAdapter(
         val descricao: TextView = view.findViewById(R.id.txtDescricao)
         val check: CheckBox = view.findViewById(R.id.checkFavorito)
         val imagem: ImageView = view.findViewById(R.id.imgPrato)
+        val preco: TextView = view.findViewById(R.id.txtPreco)
+        val pessoas: TextView = view.findViewById(R.id.txtPessoas)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder{
@@ -37,6 +42,27 @@ class PratoAdapter(
 
         holder.nome.text = prato.nome
         holder.descricao.text = prato.descricao
+        holder.preco.text = "R$ %.2f".format(prato.preco)
+        holder.imagem.setImageResource(prato.imagem)
+        holder.pessoas.text =
+            if (prato.pessoas == 1)
+                "👤 Serve 1 pessoa"
+            else
+                "👥 Serve ${prato.pessoas} pessoas"
+
+
+        holder.itemView.setOnClickListener {
+
+            val intent = Intent(context, DetalhePratoActivity::class.java)
+
+            intent.putExtra("nome", prato.nome)
+            intent.putExtra("descricao", prato.descricao)
+            intent.putExtra("imagem", prato.imagem)
+            intent.putExtra("preco", prato.preco)
+            intent.putExtra("pessoas", prato.pessoas)
+
+            context.startActivity(intent)
+        }
 
         val prefs = context.getSharedPreferences("favoritos", Context.MODE_PRIVATE)
 
