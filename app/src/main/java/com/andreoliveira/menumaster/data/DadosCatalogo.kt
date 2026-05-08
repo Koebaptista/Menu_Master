@@ -14,7 +14,7 @@ object DadosCatalogo {
                 Carro(
                     "Jeep Compass",
                     "SUV moderno com design sofisticado, conforto interno e ótimo desempenho urbano.",
-                    R.drawable.carro_padrao,
+                    R.drawable.jeep,
                     185000.0,
                     2023
                 ),
@@ -22,14 +22,14 @@ object DadosCatalogo {
                 Carro(
                     "Toyota SW4",
                     "SUV robusto com espaço interno amplo e excelente desempenho off-road.",
-                    R.drawable.carro_padrao,                    368000.0,
+                    R.drawable.toyota,                    368000.0,
                     2024
                 ),
 
                 Carro(
                     "Honda HR-V",
                     "SUV compacto econômico, confortável e ideal para uso diário.",
-                    R.drawable.carro_padrao,                    162000.0,
+                    R.drawable.honda_jeep,                    162000.0,
                     2023
                 )
             )
@@ -39,7 +39,7 @@ object DadosCatalogo {
                 Carro(
                     "Chevrolet Onix",
                     "Hatch econômico com ótimo consumo de combustível e tecnologia moderna.",
-                    R.drawable.carro_padrao,
+                    R.drawable.onix,
                     89000.0,
                     2024
                 ),
@@ -47,7 +47,7 @@ object DadosCatalogo {
                 Carro(
                     "Hyundai HB20",
                     "Compacto confortável, moderno e ideal para uso urbano.",
-                    R.drawable.carro_padrao,
+                    R.drawable.hb20,
                     95000.0,
                     2023
                 ),
@@ -55,7 +55,7 @@ object DadosCatalogo {
                 Carro(
                     "Renault Kwid",
                     "Modelo compacto econômico com baixo custo de manutenção.",
-                    R.drawable.carro_padrao,
+                    R.drawable.kwid,
                     72000.0,
                     2024
                 )
@@ -66,7 +66,7 @@ object DadosCatalogo {
                 Carro(
                     "Ford Mustang GT",
                     "Esportivo V8 com desempenho extremo e visual agressivo.",
-                    R.drawable.carro_padrao,
+                    R.drawable.mustang,
                     529000.0,
                     2024
                 ),
@@ -74,7 +74,7 @@ object DadosCatalogo {
                 Carro(
                     "Chevrolet Camaro",
                     "Muscle car icônico com potência elevada e acabamento esportivo.",
-                    R.drawable.carro_padrao,
+                    R.drawable.camaro,
                     515000.0,
                     2023
                 ),
@@ -82,7 +82,7 @@ object DadosCatalogo {
                 Carro(
                     "Porsche 911",
                     "Esportivo de luxo com aceleração impressionante e tecnologia premium.",
-                    R.drawable.carro_padrao,
+                    R.drawable.porche,
                     890000.0,
                     2024
                 )
@@ -93,7 +93,7 @@ object DadosCatalogo {
                 Carro(
                     "BMW M3",
                     "Sedan esportivo de luxo com alto desempenho e interior refinado.",
-                    R.drawable.carro_padrao,
+                    R.drawable.bmw,
                     650000.0,
                     2024
                 ),
@@ -101,7 +101,7 @@ object DadosCatalogo {
                 Carro(
                     "Mercedes Classe C",
                     "Modelo sofisticado com conforto premium e tecnologia avançada.",
-                    R.drawable.carro_padrao,
+                    R.drawable.mercedes,
                     420000.0,
                     2023
                 ),
@@ -109,7 +109,7 @@ object DadosCatalogo {
                 Carro(
                     "Audi A5",
                     "Cupê de luxo com design elegante e performance esportiva.",
-                    R.drawable.carro_padrao,
+                    R.drawable.audi,
                     399000.0,
                     2024
                 )
@@ -120,7 +120,7 @@ object DadosCatalogo {
                 Carro(
                     "Tesla Model S",
                     "Carro elétrico de alta performance com autonomia avançada.",
-                    R.drawable.carro_padrao,
+                    R.drawable.tesla,
                     750000.0,
                     2024
                 ),
@@ -128,7 +128,7 @@ object DadosCatalogo {
                 Carro(
                     "BYD Dolphin",
                     "Hatch elétrico moderno com excelente custo-benefício.",
-                    R.drawable.carro_padrao,
+                    R.drawable.byd,
                     185000.0,
                     2024
                 ),
@@ -136,7 +136,7 @@ object DadosCatalogo {
                 Carro(
                     "Volvo EX30",
                     "SUV elétrico compacto com foco em segurança e sustentabilidade.",
-                    R.drawable.carro_padrao,
+                    R.drawable.volvo,
                     290000.0,
                     2024
                 )
