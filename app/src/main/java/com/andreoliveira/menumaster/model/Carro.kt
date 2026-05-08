@@ -1,11 +1,10 @@
 package com.andreoliveira.menumaster.model
 
-data class Prato(
+data class Carro(
     val nome: String,
     val descricao: String,
     val imagem: Int,
     val preco: Double,
-    val pessoas: Int,
+    val ano: Int,
     var favorito: Boolean = false
-
 )

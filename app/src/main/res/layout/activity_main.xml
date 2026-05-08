@@ -27,7 +27,7 @@
             android:id="@+id/txtSubtitle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Explore os melhores pratos do nosso cardápio"
+            android:text="Explore os melhores carros do nosso catalogo"
             android:textSize="16sp"
             android:textColor="@color/text_secondary"
             android:gravity="center"
@@ -41,14 +41,14 @@
             android:layout_centerHorizontal="true"
             android:layout_below="@id/txtSubtitle"
             android:layout_marginTop="40dp"
-            android:src="@drawable/menu_master"
+            android:src="@drawable/carro_padrao"
             android:scaleType="centerInside"/>
 
         <TextView
             android:id="@+id/txtHighlight"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="🍔 Variedade de pratos\n🍰 Sobremesas deliciosas\n🥤 Bebidas refrescantes"
+            android:text="🚗 SUVs modernos\n🏎️ Carros esportivos\n⚡ Modelos elétricos"
             android:textSize="16sp"
             android:textColor="@color/text_primary"
             android:gravity="center"
@@ -59,7 +59,7 @@
             android:id="@+id/btnDiscover"
             android:layout_width="match_parent"
             android:layout_height="60dp"
-            android:text="Ver Cardápio"
+            android:text="Ver Catalogo"
             android:textSize="18sp"
             android:textColor="@color/white"
             android:backgroundTint="@color/primary"
@@ -72,7 +72,7 @@
             android:id="@+id/txtFooter"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Grupo 2"
+            android:text="App para pesquisa e execução"
             android:textSize="12sp"
             android:textColor="@color/text_secondary"
             android:gravity="center"
@@ -83,3 +83,24 @@
     </RelativeLayout>
 
 </ScrollView>
+
+<LinearLayout
+xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:orientation="vertical">
+
+<FrameLayout
+    android:id="@+id/frameContainer"
+    android:layout_width="match_parent"
+    android:layout_height="0dp"
+    android:layout_weight="1"/>
+
+<com.google.android.material.bottomnavigation.BottomNavigationView
+    android:id="@+id/bottomNavigation"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:menu="@menu/bottom_menu"/>
+
+</LinearLayout>

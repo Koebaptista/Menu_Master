@@ -12,10 +12,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MenuMaster">
         <activity
-            android:name=".DetalhePratoActivity"
+            android:name=".DetalheCarroActivity"
             android:exported="false" />
         <activity
-            android:name=".MenuActivity"
+            android:name=".CatalogoActivity"
             android:exported="true" />
         <activity
             android:name=".MainActivity"

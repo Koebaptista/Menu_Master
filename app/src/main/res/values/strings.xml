@@ -14,4 +14,6 @@
     <string name="welcome">Seja bem-vindo ao MenuMaster</string>
 
     <string name="favoritos">Favorito</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

@@ -9,24 +9,24 @@ import android.widget.CheckBox
 import android.widget.Toast
 import android.widget.Button
 
-class DetalhePratoActivity : AppCompatActivity() {
+class DetalheCarroActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_detalhe_prato)
+        setContentView(R.layout.activity_detalhe_carro)
 
         val nome = intent.getStringExtra("nome")
         val descricao = intent.getStringExtra("descricao")
         val imagem = intent.getIntExtra("imagem", 0)
 
         val preco = intent.getDoubleExtra("preco", 0.0)
-        val pessoas = intent.getIntExtra("pessoas", 1)
+        val ano = intent.getIntExtra("ano", 2024)
 
         val txtNome = findViewById<TextView>(R.id.txtNomeDetalhe)
         val txtDescricao = findViewById<TextView>(R.id.txtDescricaoDetalhe)
         val img = findViewById<ImageView>(R.id.imgDetalhe)
         val txtPreco = findViewById<TextView>(R.id.txtPrecoDetalhe)
-        val txtPessoas = findViewById<TextView>(R.id.txtPessoasDetalhe)
+        val txtAno = findViewById<TextView>(R.id.txtAnoDetalhe)
 
         txtNome.text = nome
         txtDescricao.text = descricao
@@ -34,11 +34,7 @@ class DetalhePratoActivity : AppCompatActivity() {
 
         txtPreco.text = "R$ %.2f".format(preco)
 
-        txtPessoas.text =
-            if (pessoas == 1)
-                "👤 Serve 1 pessoa"
-            else
-                "👥 Serve $pessoas pessoas"
+        txtAno.text = "📅 Ano: $ano"
 
         val btnVoltar = findViewById<Button>(R.id.btnVoltar)
 

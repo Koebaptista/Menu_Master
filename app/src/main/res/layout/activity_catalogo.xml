@@ -9,7 +9,7 @@
         android:id="@+id/txtTitle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Cardápio"
+        android:text="Catálogo"
         android:textSize="26sp"
         android:textStyle="bold"
         android:textColor="@color/text_primary"
@@ -37,46 +37,46 @@
             android:paddingEnd="12dp">
 
             <Button
-                android:id="@+id/btnEntries"
+                android:id="@+id/btnSUV"
                 android:layout_width="140dp"
                 android:layout_height="50dp"
-                android:text="Entradas"
+                android:text="SUV"
                 android:textColor="@color/white"
                 android:backgroundTint="@color/primary"
                 android:layout_marginEnd="12dp"/>
 
             <Button
-                android:id="@+id/btnDishes"
+                android:id="@+id/btnEconomicos"
                 android:layout_width="140dp"
                 android:layout_height="50dp"
-                android:text="Pratos"
+                android:text="economicos"
                 android:textColor="@color/white"
                 android:backgroundTint="@color/primary"
                 android:layout_marginEnd="12dp"/>
 
             <Button
-                android:id="@+id/btnDesserts"
+                android:id="@+id/btnEsportivos"
                 android:layout_width="140dp"
                 android:layout_height="50dp"
-                android:text="Doces"
+                android:text="Esportivos"
                 android:textColor="@color/white"
                 android:backgroundTint="@color/primary"
                 android:layout_marginEnd="12dp"/>
 
             <Button
-                android:id="@+id/btnDrinks"
+                android:id="@+id/btnLuxo"
                 android:layout_width="140dp"
                 android:layout_height="50dp"
-                android:text="Bebidas"
+                android:text="Luxo"
                 android:textColor="@color/white"
                 android:backgroundTint="@color/primary"
                 android:layout_marginEnd="12dp"/>
 
             <Button
-                android:id="@+id/btnExtras"
+                android:id="@+id/btnEletricos"
                 android:layout_width="140dp"
                 android:layout_height="50dp"
-                android:text="Extras"
+                android:text="Eletricos"
                 android:textColor="@color/white"
                 android:backgroundTint="@color/primary"
                 android:layout_marginEnd="12dp"/>
@@ -101,7 +101,7 @@
         android:layout_marginBottom="8dp"/>
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerPratos"
+        android:id="@+id/recyclerCarros"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:padding="12dp"/>

@@ -6,10 +6,9 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.andreoliveira.menumaster.R
-import com.andreoliveira.menumaster.adapter.PratoAdapter
-import com.andreoliveira.menumaster.data.DadosCardapio
-import com.andreoliveira.menumaster.model.Prato
+import com.andreoliveira.menumaster.adapter.CarroAdapter
+import com.andreoliveira.menumaster.data.DadosCatalogo
+import com.andreoliveira.menumaster.model.Carro
 
 class FavoritosActivity : AppCompatActivity(){
 
@@ -28,7 +27,7 @@ class FavoritosActivity : AppCompatActivity(){
             Toast.makeText(this,"Nenhum favorito ainda",Toast.LENGTH_SHORT).show()
         }
 
-        recycler.adapter = PratoAdapter(lista, this) {
+        recycler.adapter = CarroAdapter(lista, this) {
             atualizarLista()
         }
 
@@ -37,19 +36,19 @@ class FavoritosActivity : AppCompatActivity(){
         }
     }
 
-    fun carregarFavoritos(): List<Prato>{
+    fun carregarFavoritos(): List<Carro>{
         val prefs = getSharedPreferences("favoritos", MODE_PRIVATE)
 
         val todasListas = listOf(
-            DadosCardapio.getLista("entradas"),
-            DadosCardapio.getLista("pratos"),
-            DadosCardapio.getLista("sobremesas"),
-            DadosCardapio.getLista("bebidas"),
-            DadosCardapio.getLista("extras")
+            DadosCatalogo.getLista("suv"),
+            DadosCatalogo.getLista("economicos"),
+            DadosCatalogo.getLista("esportivos"),
+            DadosCatalogo.getLista("luxo"),
+            DadosCatalogo.getLista("eletricos")
 
         )
 
-        val favoritos = mutableListOf<Prato>()
+        val favoritos = mutableListOf<Carro>()
 
         for(lista in todasListas){
             for(prato in lista){
@@ -63,7 +62,7 @@ class FavoritosActivity : AppCompatActivity(){
     }
     fun atualizarLista() {
         val novaLista = carregarFavoritos()
-        recycler.adapter = PratoAdapter(novaLista, this) {
+        recycler.adapter = CarroAdapter(novaLista, this) {
             atualizarLista()
         }
     }

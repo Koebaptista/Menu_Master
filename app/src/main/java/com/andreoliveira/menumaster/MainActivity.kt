@@ -2,9 +2,7 @@ package com.andreoliveira.menumaster
 
 import android.content.Intent
 import android.os.Bundle
-import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
-import com.andreoliveira.menumaster.R
 
 import com.andreoliveira.menumaster.databinding.ActivityMainBinding
 
@@ -19,7 +17,7 @@ class MainActivity : AppCompatActivity(){
         setContentView(binding.root)
 
         binding.btnDiscover.setOnClickListener {
-            val intent = Intent(this, MenuActivity::class.java)
+            val intent = Intent(this, CatalogoActivity::class.java)
             startActivity(intent)
         }
     }
